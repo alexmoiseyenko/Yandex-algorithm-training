@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile("input2.txt", "utf8", (err, data) => {
+fs.readFile("input.txt", "utf8", (err, data) => {
     const arr = data.trim().split(' ').map(Number);
 
     const numberOfAllStations = arr[0];
@@ -13,8 +13,6 @@ fs.readFile("input2.txt", "utf8", (err, data) => {
         startStationNum - 1 + numberOfAllStations - endStationNum;
 
     const res = Math.min(clockwiseStationsNum, counterclockwiseStationsNum);
-
-    console.log(res)
 
     fs.writeFile("output.txt", res.toString(), () => {});
 });
