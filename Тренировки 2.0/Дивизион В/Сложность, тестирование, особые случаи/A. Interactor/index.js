@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile("input1.txt", "utf8", (err, data) => {
+fs.readFile("input.txt", "utf8", (err, data) => {
     const arr = data.trim().split('\n').map(Number);
 
     const taskCompletionCode  = arr[0];
